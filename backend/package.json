@@ -6,9 +6,18 @@
     "dev": "bun --hot src/index.ts",
     "start": "NODE_ENV=production bun src/index.ts"
   },
-  "devDependencies": {},
-  "dependencies": {
-    "@types/express": "^5.0.5",
-    "express": "^5.1.0"
-  }
+  "devDependencies": {
+  "@types/bun": "latest"
+},
+"dependencies": {
+  "@types/express": "^5.0.5",
+  "@types/node": "^24.10.1",
+  "express": "^5.1.0",
+  "mitt": "^3.0.1",
+  "mongoose": "^8.20.0"
+},
+"private": true,
+"peerDependencies": {
+  "typescript": "^5"
+}
 }
