@@ -1,0 +1,14 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "main": "src/server.ts",
+  "scripts": {
+    "dev": "bun --hot src/index.ts",
+    "start": "NODE_ENV=production bun src/index.ts"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@types/express": "^5.0.5",
+    "express": "^5.1.0"
+  }
+}
