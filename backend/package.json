@@ -17,11 +17,20 @@
     "prettier": "^3.6.2"
   },
   "dependencies": {
+    "@types/bcrypt": "^6.0.0",
     "@types/express": "^5.0.5",
+    "@types/express-session": "^1.18.2",
     "@types/node": "^24.10.1",
+    "@types/passport": "^1.0.17",
+    "@types/passport-local": "^1.0.38",
     "express": "^5.1.0",
+    "express-session": "^1.18.2",
     "mitt": "^3.0.1",
-    "mongoose": "^8.20.0"
+    "mongoose": "^8.20.0",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-microsoft": "^2.1.0"
   },
   "private": true,
   "peerDependencies": {
