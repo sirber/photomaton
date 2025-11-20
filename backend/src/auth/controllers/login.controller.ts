@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import type { Request, Response, NextFunction } from 'express';
-import passport from '../../auth/passport';
+import passport from '../passport';
 
 const router = Router();
 

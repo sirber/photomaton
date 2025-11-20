@@ -4,6 +4,10 @@ export interface IUser extends Document {
   username: string;
   email: string;
   password: string;
+  providers?: {
+    google?: { id?: string; profile?: any };
+    microsoft?: { id?: string; profile?: any };
+  };
   type?: string;
   preferredUsername?: string;
   inbox?: string;
@@ -36,6 +40,16 @@ const UserSchema: Schema = new Schema<IUser>(
       id: { type: String },
       owner: { type: String },
       publicKeyPem: { type: String },
+    },
+    providers: {
+      google: {
+        id: { type: String },
+        profile: { type: Schema.Types.Mixed }
+      },
+      microsoft: {
+        id: { type: String },
+        profile: { type: Schema.Types.Mixed }
+      }
     },
     summary: { type: String },
     icon: { type: String },

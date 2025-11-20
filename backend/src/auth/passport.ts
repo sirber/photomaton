@@ -2,6 +2,8 @@ import passport from 'passport';
 import { User } from '../user/models/user.model';
 import type { IUser } from '../user/models/user.model';
 import './strategies/local';
+import './strategies/google';
+import './strategies/microsoft';
 
 passport.serializeUser(function (user: Express.User | IUser, done) {
   // store the user id in the session
