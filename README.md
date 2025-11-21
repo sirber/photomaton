@@ -1,4 +1,4 @@
-# Photomaton
+# Photografedi
 
 An [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub) powered photo sharing website!
 Inspired by Flickr and Pixelfed.
