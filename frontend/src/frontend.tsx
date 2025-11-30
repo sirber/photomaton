@@ -1,13 +1,22 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import { App } from "./App";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "@/pages/Index";
+import NotFound from "@/pages/NotFound";
+import Layout from "@/components/Layout";
+
+import "./index.css";
 
 const elem = document.getElementById("root")!;
 const app = (
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   </StrictMode>
 );
