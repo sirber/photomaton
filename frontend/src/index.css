@@ -185,3 +185,25 @@ code {
     animation: none !important;
   }
 }
+
+/* Layout helpers for the Bulma-based Layout component */
+.layout-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* When Navbar is fixed top, add a spacer equal to its height */
+.navbar-spacer {
+  height: 3.25rem; /* Bulma navbar default height */
+  flex-shrink: 0;
+}
+
+.layout-content {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
