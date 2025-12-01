@@ -27,7 +27,7 @@ services:
       - ./frontend:/app
     environment:
       - NODE_ENV=development
-      - REACT_APP_API_URL=http://localhost:3001
+      - BUN_PUBLIC_API_URL=http://localhost:3001
     depends_on:
       - backend
     restart: unless-stopped

@@ -1,5 +1,5 @@
 import express from 'express';
-import path from 'path';
+import cors from 'cors';
 import session from 'express-session';
 import passport from './auth/passport';
 const app = express();
@@ -7,11 +7,6 @@ const app = express();
 // Database
 import { connectToDatabase } from './common/database';
 await connectToDatabase();
-
-// Serve frontend (production)
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'static')));
-}
 
 // Body parsing
 app.use(express.json());
@@ -22,7 +17,13 @@ app.use(session({
   secret: process.env.SESSION_SECRET || 'dev-session-secret',
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: process.env.NODE_ENV === 'production' }
+  cookie: { secure: process.env.NODE_ENV === 'production', sameSite: 'lax' }
+}));
+
+// Allow requests from the frontend with credentials (cookies)
+app.use(cors({
+  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  credentials: true,
 }));
 
 app.use(passport.initialize());

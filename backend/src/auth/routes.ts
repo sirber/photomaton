@@ -7,9 +7,9 @@ import loginController from './controllers/login.controller';
 
 const router = Router();
 
-router.get('/:provider', startOAuth);
-router.get('/:provider/callback', callbackOAuth);
 router.get('/me', meController);
 router.post('/login', loginController);
+router.get('/:provider', startOAuth);
+router.get('/:provider/callback', callbackOAuth);
 
 export default router;

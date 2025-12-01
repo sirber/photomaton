@@ -1,4 +1,8 @@
+import { userRepository } from "@/repositories/userRepository";
+
 export default function Index() {
+  const { data, error, isLoading} = userRepository();
+  
   return (
     <>
       <p>Hello 1</p>
