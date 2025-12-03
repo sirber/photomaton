@@ -1,7 +1,7 @@
-import { userRepository } from "@/repositories/userRepository";
+import { useUser } from "@/repositories/userRepository";
 
 export default function Index() {
-  const { data, error, isLoading} = userRepository();
+  const { data, error, isLoading } = useUser();
   
   return (
     <>
