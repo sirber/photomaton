@@ -22,7 +22,8 @@ export function TopNav() {
           </Typography>
           <Button color="inherit" onClick={() => navigate('/')}>Home</Button>
           <Button color="inherit">About</Button>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" onClick={() => navigate('/auth/register')}>Register</Button>
+          <Button color="inherit" onClick={() => navigate('/auth/login')}>Login</Button>
         </Toolbar>
       </AppBar>
     </Box>
