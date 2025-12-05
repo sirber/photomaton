@@ -1,7 +1,7 @@
 import type { Request, Response } from 'express';
 
 export default function meController(req: Request, res: Response) {
-  if (!req.user) return res.status(401).json({ ok: false });
+  if (!req.user) return res.status(200).json({ ok: false });
 
   const maybeUser = req.user;
   if (!maybeUser || typeof maybeUser !== 'object') return res.status(500).json({ ok: false });
